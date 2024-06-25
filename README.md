@@ -19,7 +19,7 @@ Este guia oferece instruções passo a passo para configurar um ambiente web com
 
 
 Verifique a instalação:
-```sh
+
 docker-compose --version
 
 ## Passo 2: Iniciar Docker Swarm
