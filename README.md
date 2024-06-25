@@ -19,16 +19,21 @@ Este guia oferece instruções passo a passo para configurar um ambiente web com
 
 
 Verifique a instalação:
+```sh
 docker-compose --version
 
-Passo 2: Iniciar Docker Swarm
+## Passo 2: Iniciar Docker Swarm
+
 sudo docker swarm init
 
-Passo 3: Configurar a Rede Docker
-1.Crie uma rede overlay para o Docker Swarm:
+
+## Passo 3: Configurar a Rede Docker
+1. Crie uma rede overlay para o Docker Swarm:
+
 sudo docker network create --driver overlay my_network
 
-Passo 4: Criar os Arquivos de Configuração
+##  Passo 4: Criar os Arquivos de Configuração
+
 1.Crie um diretório para os arquivos de configuração:
 mkdir ~/docker-setup
 cd ~/docker-setup
