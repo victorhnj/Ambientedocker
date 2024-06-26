@@ -148,7 +148,33 @@ WordPress: http://<seu-ip>:80
 Prometheus: http://<seu-ip>:9090
 Grafana: http://<seu-ip>:3000
 
+## Passo a Passo para Corrigir a Conexão entre Redis e Docker
+### 1. Acessar o Container do WordPress:
+sudo docker ps
 
+### 2. Acessar o Container do WordPress via Terminal:
+sudo docker exec -it <ID_DO_SEU_CONTAINER_WORDPRESS> bash
+
+### 3.0 Atualizar e Instalar o Nano (opcional, se necessário):
+apt update
+apt install nano
+
+### 4. Editar o arquivo wp-config.php:
+nano wp-config.php
+
+### 5. Adicionar Configurações do Redis:
+define('WP_CACHE', true);
+define('WP_REDIS_HOST', 'redis');
+define('WP_REDIS_PORT', 6379);
+
+### 6. Salvar e Fechar o Arquivo:
+Pressione CTRL+O para salvar as alterações.
+Pressione Enter para confirmar o nome do arquivo.
+Pressione CTRL+X para sair do nano.
+
+
+## Verificar a Conexão com o Redis:
+Após editar o arquivo wp-config.php, retorne ao painel do WordPress, atualize a página (pressionando F5) e verifique se o Redis agora aparece como "Acessível" nas configurações ou plugins do WordPress que estão utilizando o Redis.
 
 
 
