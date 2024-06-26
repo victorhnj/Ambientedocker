@@ -1,6 +1,6 @@
 # Ambientedocker
 Ambiente Docker
-# Configuração do Ambiente Docker Swarm com WordPress, MySQL, Prometheus, Redis e Grafana
+## Configuração do Ambiente Docker Swarm com WordPress, MySQL, Prometheus, Redis e Grafana
 
 Este guia oferece instruções passo a passo para configurar um ambiente web completo utilizando Docker Swarm. O ambiente inclui WordPress para gerenciamento de conteúdo, MySQL para banco de dados, Prometheus para monitoramento, Redis para cache e Grafana para visualização de dados.
 
@@ -9,7 +9,7 @@ Este guia oferece instruções passo a passo para configurar um ambiente web com
 - Ubuntu Server com Docker instalado
 - Conhecimento básico de Docker
 
-# Passo 1: Instalar Docker Compose
+## Passo 1: Instalar Docker Compose
 
 1. Instale o Docker Compose se ainda não estiver instalado:
 
@@ -22,24 +22,24 @@ Verifique a instalação:
 
 docker-compose --version
 
-# Passo 2: Iniciar Docker Swarm
+## Passo 2: Iniciar Docker Swarm
 
 sudo docker swarm init
 
 
-# Passo 3: Configurar a Rede Docker
+## Passo 3: Configurar a Rede Docker
 1. Crie uma rede overlay para o Docker Swarm:
 
 sudo docker network create --driver overlay my_network
 
-#  Passo 4: Criar os Arquivos de Configuração
+## Passo 4: Criar os Arquivos de Configuração
 
 1.Crie um diretório para os arquivos de configuração:
 mkdir ~/docker-setup
 cd ~/docker-setup
 
 
-# Crie o arquivo docker-compose.yml: 
+## Crie o arquivo docker-compose.yml: 
 
 ### nano docker-compose.yml
 
@@ -111,7 +111,7 @@ networks:
     external: true
 
 
- # 3.Crie o arquivo prometheus.yml 
+ ## 3.Crie o arquivo prometheus.yml 
   ### nano prometheus.yml
 Informe os seguinte dados 
  
