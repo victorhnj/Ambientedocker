@@ -39,7 +39,7 @@ mkdir ~/docker-setup
 cd ~/docker-setup
 
 
-Crie o arquivo docker-compose.yml:
+# Crie o arquivo docker-compose.yml:
 version: '3.7'
 
 services:
@@ -106,7 +106,7 @@ networks:
     external: true
 
 
-3.Crie o arquivo prometheus.yml 
+ # 3.Crie o arquivo prometheus.yml 
 global:
   scrape_interval: 15s
 
@@ -125,16 +125,16 @@ scrape_configs:
 
 
 
-Passo 5: Implantar o Stack no Docker Swarm
+## Passo 5: Implantar o Stack no Docker Swarm
 1.Implante o stack usando Docker Swarm:
 sudo docker stack deploy -c docker-compose.yml my_stack
 
-Passo 6: Verificar e Acessar os Serviços
+## Passo 6: Verificar e Acessar os Serviços
 1.Verifique se os serviços estão em execução:
 sudo docker stack services my_stack
 
 
-Acesse os serviços via navegador:
+## Acesse os serviços via navegador:
 
 WordPress: http://<seu-ip>:80
 Prometheus: http://<seu-ip>:9090
