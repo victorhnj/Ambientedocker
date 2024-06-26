@@ -40,7 +40,9 @@ cd ~/docker-setup
 
 
 # Crie o arquivo docker-compose.yml: 
-nano docker-compose.yml
+
+### nano docker-compose.yml
+
 Informe esses Dados 
 
 version: '3.7'
