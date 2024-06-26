@@ -148,10 +148,6 @@ WordPress: http://<seu-ip>:80
 Prometheus: http://<seu-ip>:9090
 Grafana: http://<seu-ip>:3000
 
-file:///home/victor/Imagens/Capturas%20de%20tela/Captura%20de%20tela%20de%202024-06-25%2021-26-53.png
-
-
-
 
 ## Passo a Passo para Corrigir a Conexão entre Redis e Docker
 ### 1. Acessar o Container do WordPress:
